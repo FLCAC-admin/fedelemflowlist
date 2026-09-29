@@ -43,3 +43,42 @@ Flowable,Context
 "Water, saline",resource/water/subterranean/brackish water body
 "Water, saline",resource/water/subterranean/brackish water body/confined aquifer
 "Water, saline",resource/water/subterranean/brackish water body/unconfined aquifer
+Carbon,resource/ground
+Carbon,resource/ground/terrestrial/barren land
+Carbon,resource/ground/terrestrial/forest
+Carbon,resource/ground/terrestrial/grassland
+Carbon,resource/ground/terrestrial/shrubland
+Carbon,resource/ground/terrestrial/snow and ice
+Carbon,resource/ground/terrestrial/wetland
+Carbon dioxide,resource/ground
+Carbon dioxide,resource/ground/terrestrial/barren land
+Carbon dioxide,resource/ground/terrestrial/forest
+Carbon dioxide,resource/ground/terrestrial/grassland
+Carbon dioxide,resource/ground/terrestrial/shrubland
+Carbon dioxide,resource/ground/terrestrial/snow and ice
+Carbon dioxide,resource/ground/terrestrial/wetland
+Carbon dioxide,emission/ground
+Carbon dioxide,emission/ground/human-dominated
+Carbon dioxide,emission/ground/human-dominated/agricultural
+Carbon dioxide,emission/ground/human-dominated/agricultural/rural
+Carbon dioxide,emission/ground/human-dominated/agricultural/urban
+Carbon dioxide,emission/ground/human-dominated/commercial
+Carbon dioxide,emission/ground/human-dominated/commercial/rural
+Carbon dioxide,emission/ground/human-dominated/commercial/urban
+Carbon dioxide,emission/ground/human-dominated/industrial
+Carbon dioxide,emission/ground/human-dominated/industrial/rural
+Carbon dioxide,emission/ground/human-dominated/industrial/urban
+Carbon dioxide,emission/ground/human-dominated/residential
+Carbon dioxide,emission/ground/human-dominated/residential/rural
+Carbon dioxide,emission/ground/human-dominated/residential/urban
+Carbon dioxide,emission/ground/terrestrial/barren land
+Carbon dioxide,emission/ground/terrestrial/forest
+Carbon dioxide,emission/ground/terrestrial/grassland
+Carbon dioxide,emission/ground/terrestrial/shrubland
+Carbon dioxide,emission/ground/terrestrial/snow and ice
+Carbon dioxide,emission/ground/terrestrial/wetland
+Carbon dioxide,resource/air/subterranean
+"Carbon dioxide, biogenic",resource/air/subterranean
+Carbon dioxide,emission/air/subterranean
+"Carbon dioxide, biogenic",emission/air/subterranean
+"Carbon dioxide, land use change",emission/air/subterranean
