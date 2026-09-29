@@ -77,3 +77,8 @@ Carbon dioxide,emission/ground/terrestrial/grassland
 Carbon dioxide,emission/ground/terrestrial/shrubland
 Carbon dioxide,emission/ground/terrestrial/snow and ice
 Carbon dioxide,emission/ground/terrestrial/wetland
+Carbon dioxide,resource/air/subterranean
+"Carbon dioxide, biogenic",resource/air/subterranean
+Carbon dioxide,emission/air/subterranean
+"Carbon dioxide, biogenic",emission/air/subterranean
+"Carbon dioxide, land use change",emission/air/subterranean
