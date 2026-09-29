@@ -145,6 +145,9 @@ def apply_carbon_ghg_policy(df, method_name, policy=None):
                 .drop(columns='_k'))
         part['TargetFlowName'] = rule['target']
         part['ConversionFactor'] = float(rule['cf'])
+        part['Mapper'] = 'Young'
+        part['Verifier'] = 'Morelli'
+        part['LastUpdated'] = '9/29/2026'
         parts.append(part)
     if not parts:
         return df
