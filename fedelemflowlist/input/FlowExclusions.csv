@@ -57,3 +57,23 @@ Carbon dioxide,resource/ground/terrestrial/grassland
 Carbon dioxide,resource/ground/terrestrial/shrubland
 Carbon dioxide,resource/ground/terrestrial/snow and ice
 Carbon dioxide,resource/ground/terrestrial/wetland
+Carbon dioxide,emission/ground
+Carbon dioxide,emission/ground/human-dominated
+Carbon dioxide,emission/ground/human-dominated/agricultural
+Carbon dioxide,emission/ground/human-dominated/agricultural/rural
+Carbon dioxide,emission/ground/human-dominated/agricultural/urban
+Carbon dioxide,emission/ground/human-dominated/commercial
+Carbon dioxide,emission/ground/human-dominated/commercial/rural
+Carbon dioxide,emission/ground/human-dominated/commercial/urban
+Carbon dioxide,emission/ground/human-dominated/industrial
+Carbon dioxide,emission/ground/human-dominated/industrial/rural
+Carbon dioxide,emission/ground/human-dominated/industrial/urban
+Carbon dioxide,emission/ground/human-dominated/residential
+Carbon dioxide,emission/ground/human-dominated/residential/rural
+Carbon dioxide,emission/ground/human-dominated/residential/urban
+Carbon dioxide,emission/ground/terrestrial/barren land
+Carbon dioxide,emission/ground/terrestrial/forest
+Carbon dioxide,emission/ground/terrestrial/grassland
+Carbon dioxide,emission/ground/terrestrial/shrubland
+Carbon dioxide,emission/ground/terrestrial/snow and ice
+Carbon dioxide,emission/ground/terrestrial/wetland
