@@ -15,8 +15,8 @@ from fedelemflowlist.lcia_mapping import apply_carbon_ghg_policy, \
 # Options: 'TRACI2.1', 'TRACI2.2', 'ReCiPe2016', 'ImpactWorld+, 'IPCC'
 lcia_name = 'TRACI2.2'
 # None uses CARBON_GHG_POLICY_BIOGENIC_STOCK (default).
-# For net biogenic accounting (+1/-1), use CARBON_GHG_POLICY and a distinct
-# mapping_name (e.g. 'IPCC_net') so SourceListName / output file differ from
+# For gross biogenic accounting (+1/-1), use CARBON_GHG_POLICY and a distinct
+# mapping_name (e.g. 'IPCC_gross') so SourceListName / output file differ from
 # the stock mapping.
 carbon_policy = None
 mapping_name = None  # None = same as lcia_name
