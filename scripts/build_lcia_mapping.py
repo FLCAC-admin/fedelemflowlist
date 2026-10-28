@@ -14,13 +14,18 @@ from fedelemflowlist.lcia_mapping import apply_carbon_ghg_policy, \
 
 # Options: 'TRACI2.1', 'TRACI2.2', 'ReCiPe2016', 'ImpactWorld+, 'IPCC'
 lcia_name = 'TRACI2.2'
-# None uses CARBON_GHG_POLICY_BIOGENIC_STOCK (default)
+# None uses CARBON_GHG_POLICY_BIOGENIC_STOCK (default). Shipped mappings stay
+# on that stock policy. lciafmt.map_with_gross_biogenic applies CARBON_GHG_POLICY
+# in memory when a method also publishes gross biogenic indicators.
 carbon_policy = None
+mapping_name = None  # None = same as lcia_name
 if 'TRACI' in lcia_name:
     # use same source data for all TRACI versions
     source_name = 'TRACIv2'
 else:
     source_name = lcia_name
+if mapping_name is None:
+    mapping_name = lcia_name
 
 
 if __name__ == '__main__':
@@ -81,7 +86,7 @@ if __name__ == '__main__':
         lciafmt_w_context_flowable_mappings.drop(columns=columns_to_drop)
 
     # Add LCIA name and missing fields
-    lciafmt_w_context_flowable_mappings['SourceListName'] = lcia_name
+    lciafmt_w_context_flowable_mappings['SourceListName'] = mapping_name
     if 'ConversionFactor' in flowable_mappings:
         lciafmt_w_context_flowable_mappings['ConversionFactor'] = (
             pd.to_numeric(lciafmt_w_context_flowable_mappings['ConversionFactor'],
@@ -93,6 +98,7 @@ if __name__ == '__main__':
         lciafmt_w_context_flowable_mappings['ConversionFactor'] = 1.0
     lciafmt_w_context_flowable_mappings['SourceFlowUUID'] = None
 
+    # Carbon policy keyed by source method (e.g. IPCC), not mapping_name
     lciafmt_w_context_flowable_mappings = \
         apply_carbon_ghg_policy(lciafmt_w_context_flowable_mappings, lcia_name,
                                 policy=carbon_policy)
@@ -109,4 +115,4 @@ if __name__ == '__main__':
         by=['SourceFlowName','SourceFlowContext'], ignore_index=True)
 
     # Write them to a csv
-    lcia_mappings.to_csv(flowmappingpath / f'{lcia_name}.csv', index=False)
+    lcia_mappings.to_csv(flowmappingpath / f'{mapping_name}.csv', index=False)

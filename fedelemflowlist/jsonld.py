@@ -173,10 +173,12 @@ class Writer(object):
             flow.description = description
             flow.id = row["Flow UUID"]
             flow.name = row["Flowable"]
-            flow.cas = row.get("CAS No", None)
-            flow.formula = row.get("Formula", None)
+            # Use _s so pandas NaN / blank CAS, formula, synonyms become None
+            # (omitted in JSON) instead of the literal NaN token.
+            flow.cas = _s(row.get("CAS No", None))
+            flow.formula = _s(row.get("Formula", None))
             flow.version = flow_list_specs['list_version']
-            flow.synonyms = row.get("Synonyms")
+            flow.synonyms = _s(row.get("Synonyms"))
             flow.last_change = datetime.datetime.now().isoformat()
             flow.flow_type = o.FlowType.ELEMENTARY_FLOW
             flow.category = "Elementary flows/" + row['Context'].lower()
@@ -191,7 +193,7 @@ class Writer(object):
             #Add in alternate unit flow propert(ies), if an alternate unit exists
             #in the flows list, uses short list of altflowlist to assign one or more
             #alternate units
-            if row["AltUnit"] is not None:
+            if not _isnil(row.get("AltUnit")):
                 #create dataframe of all alternate units for this flowable
                 altunits=altflowlist[altflowlist['Flowable']==row["Flowable"]]
                 for i, alternate in altunits.iterrows():
